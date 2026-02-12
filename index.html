@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<link rel="icon" type="image/png" href="icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swish</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="phone">
+
+  <div id="screen1" class="screen active">
+    <img src="images/red1.png" class="red red-top">
+    <img src="images/red2.png" class="red red-mid">
+
+    <div class="bottom-nav">
+      <button class="primary" onclick="goTo(2)">Swisha</button>
+      <button class="secondary">Skanna</button>
+    </div>
+
+    <div class="tabbar">
+      <div>Hem</div>
+      <div>Förfrågningar</div>
+      <div class="active-tabbar">Historik</div>
+      <div>Profil</div>
+    </div>
+  </div>
+
+  <div id="screen2" class="screen">
+    <div class="header">
+      <span onclick="goTo(1)">✕</span>
+      <h1>Swisha</h1>
+      <span>?</span>
+    </div>
+
+    <div class="tabs">
+      <span class="active-tab">Swish</span>
+      <span>Be om</span>
+    </div>
+
+    <div class="form">
+      <input id="recipient" placeholder="Mottagare">
+      <input id="name" placeholder="Namn">
+      <input id="amount" placeholder="Belopp">
+      <input id="message" placeholder="Meddelande">
+    </div>
+
+    <button class="primary full" onclick="submitForm()">Swish</button>
+  </div>
+
+  <div id="screen3" class="screen">
+    <img src="images/red3.gif" class="red-large" id="glitterTrigger">
+
+    <div class="receipt">
+      <div id="datetime" class="datetime"></div>
+      <div class="big-name" id="outName"></div>
+      <div class="number" id="outRecipient"></div>
+      <div class="amount"><span id="outAmount"></span> kr</div>
+      <div class="message" id="outMessage"></div>
+
+      <div class="reference-row">
+        <span>Referens</span>
+        <span>1776 6144 8255 1033</span>
+      </div>
+    </div>
+
+    <img src="images/red4.png" class="red red-bottom">
+
+    <button class="close" onclick="goTo(1)">✕</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+
+<div id="loadingScreen">
+  <img src="images/red5.png" alt="Loading">
+</div>
+
+</html>
